@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "422229823953",
+    "firebase_url": "https://deardiary-df2a5.firebaseio.com",
+    "project_id": "deardiary-df2a5",
+    "storage_bucket": "deardiary-df2a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422229823953:android:c741758ef8148f974dd0f0",
+        "android_client_info": {
+          "package_name": "com.dristy.deardiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422229823953-cog6hrbuhrlmiv1huv2nr6volf39eebq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dristy.deardiary",
+            "certificate_hash": "245469250fb3111b7816d159e3d7df4d11bdb910"
+          }
+        },
+        {
+          "client_id": "422229823953-h1siqsjeqf06qngic33sifk6rfd10mn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU3i2-qxM6Bqpb3fb1A_TqI6XEbbBLqug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422229823953-h1siqsjeqf06qngic33sifk6rfd10mn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

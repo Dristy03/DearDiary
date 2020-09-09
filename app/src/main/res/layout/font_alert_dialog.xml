@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FONTS"
+        android:textColor="#5E0606"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+
+    <TextView
+        android:id="@+id/acmeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Acme"
+        android:textSize="20sp"
+        android:fontFamily="@font/font1"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+    <TextView
+        android:id="@+id/causalId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Causal"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+
+    <TextView
+        android:id="@+id/lsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Londrina Solid"
+        android:textSize="20sp"
+        android:fontFamily="@font/font2"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/monoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Monospace"
+        android:fontFamily="monospace"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+    <TextView
+        android:id="@+id/pacId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pacifio"
+        android:textSize="20sp"
+        android:fontFamily="@font/font3"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+
+    <TextView
+        android:id="@+id/sansId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sans Serif Condensed"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+
+
+
+</LinearLayout>

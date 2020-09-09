@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COLOUR"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/font1"
+        android:textSize="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/redId"
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="#DA0707"
+    app:cardCornerRadius="20dp"
+    android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RED"
+        android:textSize="18sp"
+        android:textColor="#DA0707"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+    <androidx.cardview.widget.CardView
+android:id="@+id/blueId"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="#0766DA"
+    app:cardCornerRadius="20dp"
+    android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLUE"
+        android:textSize="18sp"
+        android:textColor="#0766DA"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+    <androidx.cardview.widget.CardView
+android:id="@+id/greenId"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#0BA31A"
+        app:cardCornerRadius="20dp"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GREEN"
+        android:textSize="18sp"
+        android:textColor="#0BA31A"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+    <androidx.cardview.widget.CardView
+android:id="@+id/purpleId"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#AE0ECA"
+        app:cardCornerRadius="20dp"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PURPLE"
+        android:textSize="18sp"
+        android:textColor="#AE0ECA"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pinkId"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#E45183"
+        app:cardCornerRadius="20dp"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PINK"
+        android:textSize="18sp"
+        android:textColor="#E45183"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+    <androidx.cardview.widget.CardView
+android:id="@+id/blackId"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@android:color/black"
+        app:cardCornerRadius="20dp"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLACK"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="start"/>
+
+</LinearLayout>

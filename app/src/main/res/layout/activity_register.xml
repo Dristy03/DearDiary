@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/log"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        >
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_baseline_arrow2_back_24"
+            android:background="@drawable/transparent_bg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:fontFamily="@font/font2"
+            android:paddingLeft="40dp"
+            android:textSize="40sp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Better late than never!"
+            android:fontFamily="@font/font1"
+            android:paddingLeft="40dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        >
+
+
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.8"
+        android:padding="10dp"
+        android:gravity="center">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+
+                    android:text="Email Address"/>
+
+                <EditText
+                    android:id="@+id/email_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"/>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Password"/>
+
+                <EditText
+                    android:id="@+id/password_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:padding="10dp"
+                    android:inputType="textPassword"/>
+                <CheckBox
+                    android:id="@+id/checkbox2Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Show Password"
+
+                    />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Confirm Password"/>
+
+                <EditText
+                    android:id="@+id/conpassword_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:padding="10dp"
+                    android:inputType="textPassword"/>
+                <CheckBox
+                    android:id="@+id/checkbox3Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Show Password"
+
+                    />
+
+                <Button
+                    android:id="@+id/signup_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="#F0B5EE"
+                    android:text="REGISTER"
+                    android:textColor="@android:color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

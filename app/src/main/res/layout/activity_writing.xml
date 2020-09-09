@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#FCFCF8"
+    tools:context=".WritingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+            <ImageView
+                android:id="@+id/backBtnId"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/colorPrimaryDark"
+                android:background="@drawable/transparent_bg"/>
+
+
+
+        <ImageView
+            android:id="@+id/colorBtnId"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/transparent_bg"
+            android:layout_alignParentRight="true"
+            app:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_baseline_color_lens_24" />
+
+
+        <ImageView
+            android:id="@+id/textBtnId"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/transparent_bg"
+            app:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_baseline_text_fields_24" />
+
+        <ImageView
+            android:id="@+id/saveTxtBtnId"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="69dp"
+            android:background="@drawable/transparent_bg"
+            android:src="@drawable/ic_baseline_save_24"
+            app:tint="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/noteId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="start"
+            android:background="#FFCCCF"
+            android:inputType="textMultiLine|textAutoCorrect"
+            android:minLines="15"
+            android:padding="10dp" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

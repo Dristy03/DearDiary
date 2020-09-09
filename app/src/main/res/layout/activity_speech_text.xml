@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccent1"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/backBtnId"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:tint="#6FB3F8"
+        android:background="@drawable/transparent_bg"/>
+
+
+
+    <ImageView
+        android:id="@+id/btnSpeak"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/transparent_bg"
+        android:layout_alignParentRight="true"
+        app:tint="#6FB3F8"
+        android:onClick="getSpeechInput"
+        android:src="@drawable/ic_mic" />
+
+
+    <ImageView
+        android:id="@+id/saveTxtBtnId"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:background="@drawable/transparent_bg"
+        android:src="@drawable/ic_baseline_save_24"
+        app:tint="#6FB3F8" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:text="Text"
+        android:fontFamily="@font/font1"
+        android:textSize="20sp"
+        android:textColor="#6FB3F8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/txvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:gravity="start"
+        android:inputType="textMultiLine|textAutoCorrect"
+        android:minLines="10"
+        android:background="#CBE3FB"
+        android:padding="5dp"
+        android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+
+ <!--   <TextView
+        android:id="@+id/txvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textColor="#000"
+        android:textSize="26sp"
+        android:textStyle="normal"/>-->
+
+    <!--<ImageView
+        android:id="@+id/btnSpeak"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:onClick="getSpeechInput"
+        android:src="@drawable/ic_mic"/>-->
+    </ScrollView>
+</RelativeLayout>

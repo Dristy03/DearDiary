@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/log"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        >
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:tint="#D8196C"
+            android:src="@drawable/ic_baseline_arrow2_back_24"
+            android:background="@drawable/transparent_bg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:fontFamily="@font/font2"
+            android:paddingLeft="40dp"
+            android:textSize="40sp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back!!!"
+            android:fontFamily="@font/font1"
+            android:paddingLeft="40dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        >
+
+
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.8"
+        android:padding="10dp"
+        android:gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="start"
+                 android:textColor="@color/colorPrimaryDark"
+                 android:fontFamily="casual"
+                 android:textStyle="bold"
+                 android:textSize="15sp"
+
+                 android:text="Email Address"/>
+
+                <EditText
+                    android:id="@+id/emailad_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"/>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Password"/>
+
+                <EditText
+                    android:id="@+id/password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:padding="10dp"
+                    android:inputType="textPassword"/>
+<CheckBox
+    android:id="@+id/checkbox1Id"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:backgroundTint="@color/colorPrimary"
+    android:text="Show Password"
+
+    />
+
+                <TextView
+                    android:id="@+id/forgetpass"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end
+"
+                    android:text="Forgot your password?"/>
+                
+   <Button
+       android:id="@+id/login_btn"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="60dp"
+       android:background="#F0B5EE"
+       android:text="LOGIN"
+       android:textColor="@android:color/white"
+       />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

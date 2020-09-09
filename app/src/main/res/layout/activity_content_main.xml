@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@color/colorAccent1"
+    tools:context=".ContentMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilebtnId"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:cropToPadding="true"
+            android:src="@drawable/prof"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="5dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="55dp"
+            android:fontFamily="casual"
+            android:text="User name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/logoutbtnId"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logout"
+            android:layout_alignParentRight="true"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/writingtxtbtnId"
+            app:cardBackgroundColor="#9DEAE6"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text Writing"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:fontFamily="@font/font1"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write whatever the heart wants\n to tell."
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:fontFamily="@font/font2"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/contract" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgtotxtbtnId"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="#FFCCCF"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="240dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font1"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Image Writing"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turn your image into words\n magically."
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:fontFamily="@font/font2"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/photo" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/speechxtbtnId"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="#FFE7BF"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="360dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font1"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Speech Writing"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turn your speech into words by\nwonder."
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:fontFamily="@font/font2"
+                android:textSize="15sp"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/message" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="#C4CEE4"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="480dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font1"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:text="Notes"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bearer of all the words you create\nanywhere anytime."
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:fontFamily="@font/font2"
+                android:textSize="15sp"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/paper" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--<Button
+            android:id="@+id/logoutbtnId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+
+        <Button
+            android:id="@+id/profilebtnId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Profile"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+        <Button
+            android:id="@+id/imgtotxtbtnId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"
+            android:text="IMG to text"/>
+        <Button
+            android:id="@+id/writingtxtbtnId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"
+            android:text="Writing"/>
+
+        <Button
+            android:id="@+id/speechxtbtnId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"
+            android:text="Speech to txt"/>-->
+
+    </RelativeLayout>
+
+</ScrollView>
