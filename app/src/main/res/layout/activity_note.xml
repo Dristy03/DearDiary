@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:orientation="vertical"
+
+    tools:context=".NoteActivity">
+
+    <ImageButton
+        android:id="@+id/backbtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:tint="#D8196C"
+        android:src="@drawable/ic_baseline_arrow2_back_24"
+        android:background="@drawable/transparent_bg"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/font1"
+        android:id="@+id/text1"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep a diary and one day it will keep you!"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/font2"
+
+        android:gravity="center_horizontal"
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/recyclerView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:fadeScrollbars="true"
+        android:layout_marginTop="20dp"
+        android:focusableInTouchMode="true"
+
+        />
+
+</LinearLayout>

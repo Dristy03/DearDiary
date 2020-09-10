@@ -24,6 +24,7 @@ android:background="@color/colorAccent1"
 
 
         <TextView
+            android:id="@+id/nameId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -150,6 +151,7 @@ android:background="@color/colorAccent1"
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/notebtnId"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:cardBackgroundColor="#C4CEE4"

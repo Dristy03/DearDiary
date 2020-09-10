@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +24,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.squareup.picasso.Picasso;
+
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
+
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 public class ShowProfile extends AppCompatActivity {
 
@@ -58,7 +64,8 @@ public class ShowProfile extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(getApplicationContext(),ContentMainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -98,21 +105,14 @@ public class ShowProfile extends AppCompatActivity {
                         });
 
 
-
-
-                        /*BlurImage.withContext(ShowProfile.this)
-                                .blurFromUri("storageReference.child(\"images/\" + FirebaseAuth.getInstance().getCurrentUser().getUid()).getBytes(500000)")
-                                .into(imageView1);*/
-                       /* Glide.with(ShowProfile.this).load(storageReference.child("images/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).getBytes(500000)).transform(new BlurTransformation(ShowProfile.this))
-                                .into(imageView1);*/
-
-                        /*storageReference.child("images/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).getBytes(500000)
-                                .addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                                    @Override
-                                    public void onSuccess(byte[] bytes) {
-                                        setProfilePic(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
-                                    }
-                                });*/
+                       storageReference.child("images/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                Glide.with(ShowProfile.this).load(uri)
+                                        .apply(bitmapTransform(new BlurTransformation(22)))
+                                        .into(imageView1);
+                            }
+                        });
 
 
 

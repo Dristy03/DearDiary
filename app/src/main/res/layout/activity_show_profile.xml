@@ -12,12 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
+        android:scaleType="fitXY"
+
 
 />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        app:cardBackgroundColor="#40D8196C"
+        app:cardBackgroundColor="#80D8196C"
         android:layout_alignParentBottom="true">
 
 
@@ -29,7 +31,7 @@
             android:layout_marginTop="5dp"
             android:textColor="@android:color/black"
             android:text="YOUR NAME"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="130dp"
             android:textSize="20sp"
             android:textStyle="bold" />
         <LinearLayout
@@ -45,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font2"
+                android:textColor="@color/colorAccent1"
                 android:text="YOUR BIO"
                 android:textSize="20sp" />
 
@@ -58,14 +61,16 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_mail_24"
-                    app:tint="@color/colorPrimaryDark"/>
+                    app:tint="@color/colorAccent1"/>
 
                 <TextView
                     android:id="@+id/emailId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
                     android:text="Email"
+                    android:textColor="@color/colorAccent1"
                     android:fontFamily="@font/font2"
                     android:textSize="20sp"/>
             </LinearLayout>
@@ -80,14 +85,16 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_cake_24"
-                    app:tint="@color/colorPrimaryDark"/>
+                    app:tint="@color/colorAccent1"/>
 
                 <TextView
                     android:id="@+id/dobId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="Date of birth"
+                    android:textColor="@color/colorAccent1"
                     android:fontFamily="@font/font2"
                     android:textSize="20sp"/>
             </LinearLayout>
@@ -122,7 +129,7 @@
     <ImageView
         android:id="@+id/img2"
         android:layout_width="103dp"
-        android:layout_height="95dp"
+        android:layout_height="103dp"
         android:layout_marginLeft="20dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="260dp"

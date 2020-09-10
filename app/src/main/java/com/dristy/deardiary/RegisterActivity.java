@@ -178,7 +178,7 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         pd.dismiss();
-                        Intent intent = new Intent(getApplicationContext(),ContentMainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         finish();

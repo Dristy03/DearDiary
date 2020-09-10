@@ -165,6 +165,8 @@ public class ProfileActivity extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             //Log.d(TAG, "onSuccess: " + taskSnapshot.getMetadata() + " "+ taskSnapshot.getUploadSessionUri());
                             pd.hide();
+                            Intent intent = new Intent(getApplicationContext(),ShowProfile.class);
+                            startActivity(intent);
                         }
                     });
         }catch (Exception e){

@@ -53,7 +53,7 @@
                 android:layout_marginBottom="100dp"
                 android:cropToPadding="true"
                 android:src="@drawable/prof"
-                app:civ_border_color="@android:color/black"
+                app:civ_border_color="@color/colorPrimaryDark"
                 app:civ_border_width="5dp" />
 
             <ImageView
@@ -67,7 +67,7 @@
                 android:layout_marginRight="116dp"
                 android:layout_marginBottom="97dp"
                 android:src="@drawable/ic_baseline_add_circle_24"
-                android:tint="@color/colorPrimaryDark" />
+                app:tint="@color/colorPrimaryDark" />
         </RelativeLayout>
 
         <LinearLayout
