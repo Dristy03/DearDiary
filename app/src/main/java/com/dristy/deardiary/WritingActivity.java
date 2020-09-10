@@ -209,8 +209,16 @@ public class WritingActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd.show();
-                processTheCounter();
+                String len=noteEt.getText().toString().trim();
+                if (len.length() < 1) {
+                    noteEt.setError("Can't save empty note!");
+                    noteEt.setFocusable(true);
+                }
+                else
+                {
+                    pd.show();
+                    processTheCounter();
+                }
 
             }
         });
@@ -272,7 +280,7 @@ public class WritingActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         pd.dismiss();
-                         cnt++;
+                        noteEt.setText("");
                         Toast.makeText(WritingActivity.this,"Saved",Toast.LENGTH_LONG).show();
                     }
                 })

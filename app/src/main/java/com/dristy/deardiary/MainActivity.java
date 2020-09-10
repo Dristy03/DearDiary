@@ -100,8 +100,17 @@ public class MainActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd.show();
-                processTheCounter();
+                String len=mResultEt.getText().toString().trim();
+                if (len.length() < 1) {
+                    mResultEt.setError("Can't save empty note!");
+                    mResultEt.setFocusable(true);
+                }
+                else
+                {
+                    pd.show();
+                    processTheCounter();
+                }
+
 
             }
         });
@@ -167,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         pd.dismiss();
-                        cnt++;
+                        mResultEt.setText("");
                         Toast.makeText(MainActivity.this,"Saved",Toast.LENGTH_LONG).show();
                     }
                 })

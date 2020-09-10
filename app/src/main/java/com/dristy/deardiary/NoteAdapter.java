@@ -24,8 +24,8 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note,NoteAdapter.MyVie
 
     @Override
     protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Note model) {
-        holder.date.setText(model.getDate());
-        holder.message.setText(model.getMessage());
+        holder.date.setText(model.getCurrentDate());
+        holder.message.setText(model.getNote());
     }
 
     @NonNull

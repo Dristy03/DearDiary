@@ -58,8 +58,16 @@ String Id;
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd.show();
-                processTheCounter();
+                String len=txvResult.getText().toString().trim();
+                if (len.length() < 1) {
+                    txvResult.setError("Can't save empty note!");
+                    txvResult.setFocusable(true);
+                }
+                else
+                {
+                    pd.show();
+                    processTheCounter();
+                }
             }
         });
     }
@@ -117,7 +125,7 @@ String Id;
                     @Override
                     public void onSuccess(Void aVoid) {
                         pd.dismiss();
-                        cnt++;
+                        txvResult.setText("");
                         Toast.makeText(SpeechTextActivity.this,"Saved",Toast.LENGTH_LONG).show();
                     }
                 })

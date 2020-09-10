@@ -1,48 +1,48 @@
 package com.dristy.deardiary;
 
 public class Note {
-    private String date,message;
-    private long priortity;
-
-    public Note(String date, String message, long priortity) {
-        this.date = date;
-        this.message = message;
-        this.priortity = priortity;
-    }
+    private String CurrentDate,Note;
+    private long Priority;
 
     public Note() {
     }
 
-    public String getDate() {
-        return date;
+    public Note(String currentDate, String note, long priority) {
+        CurrentDate = currentDate;
+        Note = note;
+        Priority = priority;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public String getCurrentDate() {
+        return CurrentDate;
     }
 
-    public String getMessage() {
-        return message;
+    public void setCurrentDate(String currentDate) {
+        CurrentDate = currentDate;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public String getNote() {
+        return Note;
     }
 
-    public long getPriortity() {
-        return priortity;
+    public void setNote(String note) {
+        Note = note;
     }
 
-    public void setPriortity(long priortity) {
-        this.priortity = priortity;
+    public long getPriority() {
+        return Priority;
+    }
+
+    public void setPriority(long priority) {
+        Priority = priority;
     }
 
     @Override
     public String toString() {
         return "Note{" +
-                "date='" + date + '\'' +
-                ", message='" + message + '\'' +
-                ", priortity=" + priortity +
+                "CurrentDate='" + CurrentDate + '\'' +
+                ", Note='" + Note + '\'' +
+                ", Priority=" + Priority +
                 '}';
     }
 }
