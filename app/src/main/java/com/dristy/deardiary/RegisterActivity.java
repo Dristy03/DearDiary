@@ -169,10 +169,11 @@ public class RegisterActivity extends AppCompatActivity {
         Log.d(TAG, "addtoDatabase: started");
         String email= FirebaseAuth.getInstance().getCurrentUser().getEmail();
         Map<String,Object> map= new HashMap<>();
-        map.put("Email",email);
-        map.put("Password",password);
+        map.put("email",email);
         map.put("NoteCounter",1000);
-
+        map.put("name","username");
+        map.put("bio","null");
+        map.put("dateOfBirth","null");
         FirebaseFirestore.getInstance().collection("Users").document(email).set(map)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

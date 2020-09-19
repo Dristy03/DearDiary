@@ -116,7 +116,7 @@
                 android:padding="10dp"
                 android:background="@drawable/buttonshape"
                 android:hint="Date of Birth"
-                android:inputType="text"/>
+                android:inputType="date"/>
 
             <Button
                 android:id="@+id/savebtnId"

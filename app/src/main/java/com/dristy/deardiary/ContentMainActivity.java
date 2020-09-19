@@ -125,8 +125,20 @@ public class ContentMainActivity extends AppCompatActivity {
                                 Glide.with(ContentMainActivity.this)
                                         .load(uri)
                                         .centerCrop()
+                                        .placeholder(R.drawable.prof)
                                         .into(ProfileBtn);
                                 pd.dismiss();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Glide.with(ContentMainActivity.this)
+                                        .load(R.drawable.prof)
+                                        .centerCrop()
+                                        .into(ProfileBtn);
+
+                                pd.dismiss();
+
                             }
                         });
                     }

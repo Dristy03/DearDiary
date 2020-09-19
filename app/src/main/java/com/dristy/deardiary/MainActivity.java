@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog pd;
     int cnt;
     String Id;
+    String font="null",color="null";
 
 
     private static  final int CAMERA_REQUEST_CODE = 200;
@@ -168,6 +169,9 @@ public class MainActivity extends AppCompatActivity {
         map.put("Note",note);
         map.put("Priority",a);
         map.put("CurrentDate",currentDate);
+        map.put("Font",font);
+        map.put("Color",color);
+        map.put("Type",0);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Notes").document(email).collection("Details").document(Id)

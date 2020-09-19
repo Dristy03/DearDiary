@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/acmeId"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Acme"
@@ -29,10 +29,10 @@
         android:layout_gravity="start"/>
     <TextView
         android:id="@+id/causalId"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Causal"
+        android:text="Casual"
         android:fontFamily="casual"
         android:textSize="20sp"
         android:textColor="@android:color/black"
@@ -42,7 +42,7 @@
 
     <TextView
         android:id="@+id/lsId"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Londrina Solid"
@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/monoId"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Monospace"
@@ -69,7 +69,7 @@
         android:layout_gravity="start"/>
     <TextView
         android:id="@+id/pacId"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Pacifio"
@@ -82,7 +82,7 @@
 
     <TextView
         android:id="@+id/sansId"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sans Serif Condensed"
         android:layout_marginTop="8dp"

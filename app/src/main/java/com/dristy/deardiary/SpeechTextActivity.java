@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -31,9 +32,11 @@ import java.util.Map;
 
 public class SpeechTextActivity extends AppCompatActivity {
 
+    private static final String TAG ="SpeechTextAct" ;
     private EditText txvResult;
     private ImageView backBtn,saveBtn;
     private ProgressDialog pd;
+    String font="null",color="null";
 int cnt;
 String Id;
     @Override
@@ -88,9 +91,9 @@ String Id;
                     if (document.exists()) {
                         //Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         cnt = document.getLong("NoteCounter").intValue();
-                        //Log.d(TAG, "DocumentSnapshot data: " + cnt);
+                        Log.d(TAG, "DocumentSnapshot data: " + cnt);
                         Id = Integer.toString(cnt);
-
+                        Log.d(TAG, "DocumentSnapshot data: " + Id);
                         addToDatabase();
                     }
                 }
@@ -117,6 +120,9 @@ String Id;
         map.put("Note",note);
         map.put("Priority",a);
         map.put("CurrentDate",currentDate);
+        map.put("Font",font);
+        map.put("Color",color);
+        map.put("Type",0);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Notes").document(email).collection("Details").document(Id)

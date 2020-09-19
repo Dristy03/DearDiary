@@ -101,22 +101,27 @@ public class ShowProfile extends AppCompatActivity {
                                         .load(uri)
                                         .centerCrop()
                                         .into(imageView2);
+
+                                storageReference.child("images/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @Override
+                                    public void onSuccess(Uri uri) {
+                                        Glide.with(ShowProfile.this).load(uri)
+                                                .apply(bitmapTransform(new BlurTransformation(22)))
+                                                .into(imageView1);
+                                    }
+                                });
+                                pd.dismiss();
                             }
-                        });
-
-
-                       storageReference.child("images/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        }).addOnFailureListener(new OnFailureListener() {
                             @Override
-                            public void onSuccess(Uri uri) {
-                                Glide.with(ShowProfile.this).load(uri)
-                                        .apply(bitmapTransform(new BlurTransformation(22)))
-                                        .into(imageView1);
+                            public void onFailure(@NonNull Exception e) {
+                                Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+                                startActivity(intent);
                             }
                         });
 
 
 
-                        pd.dismiss();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override

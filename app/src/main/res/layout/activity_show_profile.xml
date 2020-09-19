@@ -186,9 +186,12 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        app:cardBackgroundColor="#80D8196C"
-        android:layout_alignParentBottom="true">
 
+        android:layout_alignParentBottom="true">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/prof_bg"/>
 
         <TextView
             android:id="@+id/nameId"
@@ -196,7 +199,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/font1"
             android:layout_marginTop="5dp"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorPrimaryDark"
             android:text="YOUR NAME"
             android:layout_marginLeft="130dp"
             android:textSize="20sp"
@@ -214,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font2"
-                android:textColor="@color/colorAccent1"
+                android:textColor="@color/colorPrimary"
                 android:text="YOUR BIO"
                 android:textSize="20sp" />
 
@@ -228,7 +231,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_mail_24"
-                    app:tint="@color/colorAccent1"/>
+                    app:tint="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:id="@+id/emailId"
@@ -252,7 +255,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_cake_24"
-                    app:tint="@color/colorAccent1"/>
+
+                    app:tint="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:id="@+id/dobId"
@@ -304,3 +308,5 @@
         app:srcCompat="@drawable/prof" />
 
 </RelativeLayout>
+
+    <!--app:cardBackgroundColor="#E894B9"-->

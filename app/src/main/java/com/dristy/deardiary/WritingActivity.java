@@ -42,6 +42,8 @@ public class WritingActivity extends AppCompatActivity {
     private ImageView backBtn,saveBtn,fontBtn,colorBtn;
     private EditText noteEt;
     private ProgressDialog pd;
+    String font="null",color="null";
+    int type=0;
     int cnt;
     String Id;
 
@@ -80,6 +82,7 @@ public class WritingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         alertDialog.dismiss();
                         noteEt.setTextColor(getResources().getColor(R.color.Red));
+                        color="#DA0707";
                     }
                 });
                 blue.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +90,7 @@ public class WritingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         alertDialog.dismiss();
                         noteEt.setTextColor(getResources().getColor(R.color.Blue));
+                        color="#0766DA";
                     }
                 });
                 black.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +98,7 @@ public class WritingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         alertDialog.dismiss();
                         noteEt.setTextColor(getResources().getColor(R.color.Black));
+                        color="#000000";
                     }
                 });
                 green.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +106,7 @@ public class WritingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         alertDialog.dismiss();
                         noteEt.setTextColor(getResources().getColor(R.color.Green));
+                        color="#E45183";
                     }
                 });
                 pink.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +114,7 @@ public class WritingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         alertDialog.dismiss();
                         noteEt.setTextColor(getResources().getColor(R.color.Pink));
+                        color="#E45183";
                     }
                 });
                 purple.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +122,7 @@ public class WritingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         alertDialog.dismiss();
                         noteEt.setTextColor(getResources().getColor(R.color.Purple));
+                        color="#AE0ECA";
                     }
                 });
                 alertDialog.show();
@@ -145,6 +153,8 @@ public class WritingActivity extends AppCompatActivity {
                         alertDialog.dismiss();
                         Typeface face = ResourcesCompat.getFont(WritingActivity.this, R.font.font1);;
                         noteEt.setTypeface(face);
+                        font="font1";
+                        type=2;
                     }
                 });
                 causal.setOnClickListener(new View.OnClickListener() {
@@ -152,8 +162,9 @@ public class WritingActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         alertDialog.dismiss();
-
-                        noteEt.setTypeface(Typeface.create("causal", Typeface.NORMAL));
+                        noteEt.setTypeface(Typeface.create("casual", Typeface.NORMAL));
+                        font="casual";
+                        type=1;
                     }
                 });
                 lan.setOnClickListener(new View.OnClickListener() {
@@ -163,6 +174,8 @@ public class WritingActivity extends AppCompatActivity {
                         alertDialog.dismiss();
                         Typeface face = ResourcesCompat.getFont(WritingActivity.this, R.font.font2);;
                         noteEt.setTypeface(face);
+                        font="font2";
+                        type=2;
                     }
                 });
                 mono.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +185,8 @@ public class WritingActivity extends AppCompatActivity {
                         alertDialog.dismiss();
 
                         noteEt.setTypeface(Typeface.create("monospace", Typeface.NORMAL));
+                        font="monospace";
+                        type=1;
                     }
                 });
                 paci.setOnClickListener(new View.OnClickListener() {
@@ -181,6 +196,8 @@ public class WritingActivity extends AppCompatActivity {
                         alertDialog.dismiss();
                         Typeface face = ResourcesCompat.getFont(WritingActivity.this, R.font.font3);;
                         noteEt.setTypeface(face);
+                        font="font3";
+                        type=2;
                     }
                 });
                 sans.setOnClickListener(new View.OnClickListener() {
@@ -190,6 +207,7 @@ public class WritingActivity extends AppCompatActivity {
                         alertDialog.dismiss();
 
                         noteEt.setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
+                        font="sans-serif-condensed";
                     }
                 });
 
@@ -240,9 +258,7 @@ public class WritingActivity extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
 
                     if (document.exists()) {
-                        //Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         cnt = document.getLong("NoteCounter").intValue();
-                        //Log.d(TAG, "DocumentSnapshot data: " + cnt);
                         Id = Integer.toString(cnt);
 
                         addToDatabase();
@@ -272,6 +288,10 @@ public class WritingActivity extends AppCompatActivity {
         map.put("Note",note);
         map.put("Priority",a);
         map.put("CurrentDate",currentDate);
+        map.put("Font",font);
+        map.put("Color",color);
+        map.put("Type",type);
+
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Notes").document(email).collection("Details").document(Id)

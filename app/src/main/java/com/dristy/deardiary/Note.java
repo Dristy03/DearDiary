@@ -1,16 +1,44 @@
 package com.dristy.deardiary;
 
 public class Note {
-    private String CurrentDate,Note;
+    private String CurrentDate,Note,Font,Color;
     private long Priority;
+    private int Type;
 
     public Note() {
     }
 
-    public Note(String currentDate, String note, long priority) {
+    public Note(String currentDate, String note, String font, String color, long priority, int type) {
         CurrentDate = currentDate;
         Note = note;
+        Font = font;
+        Color = color;
         Priority = priority;
+        Type = type;
+    }
+
+    public int getType() {
+        return Type;
+    }
+
+    public void setType(int type) {
+        Type = type;
+    }
+
+    public String getFont() {
+        return Font;
+    }
+
+    public void setFont(String font) {
+        Font = font;
+    }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public void setColor(String color) {
+        Color = color;
     }
 
     public String getCurrentDate() {
@@ -42,7 +70,10 @@ public class Note {
         return "Note{" +
                 "CurrentDate='" + CurrentDate + '\'' +
                 ", Note='" + Note + '\'' +
+                ", Font='" + Font + '\'' +
+                ", Color='" + Color + '\'' +
                 ", Priority=" + Priority +
+                ", Type=" + Type +
                 '}';
     }
 }

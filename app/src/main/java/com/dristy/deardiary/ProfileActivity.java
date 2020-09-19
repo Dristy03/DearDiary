@@ -115,7 +115,10 @@ public class ProfileActivity extends AppCompatActivity {
                 }else if(dobTv.getText().toString().length()<1)
                 {
                     dobTv.setError("Can't be empty");
-                } else {
+                }else if(encodedImage==null) {
+                    Toast.makeText(ProfileActivity.this, "Please add your profile image before saving!", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     pd.setTitle("Updating Profile...");
                     pd.show();
                     saveProfile();
@@ -124,6 +127,24 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        String name=nameTv.getText().toString().trim();
+        String bio=bioTv.getText().toString().trim();
+        String dob=dobTv.getText().toString().trim();
+
+        if(name.length()<1 || bio.length()<1 || dob.length()<1 || encodedImage==null)
+        {
+            Toast.makeText(ProfileActivity.this, "Please complete your profile first!", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Intent intent = new Intent(getApplicationContext(),ShowProfile.class);
+            startActivity(intent);
+        }
 
     }
 
@@ -136,22 +157,21 @@ public class ProfileActivity extends AppCompatActivity {
         map.put("name",name);
         map.put("bio",bio);
         map.put("dateOfBirth",dob);
-        map.put("email",email);
-        FirebaseFirestore.getInstance().collection("Users").document(email).set(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        uploadImage();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                pd.dismiss();
-                e.printStackTrace();
-                Toast.makeText(ProfileActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
 
+            FirebaseFirestore.getInstance().collection("Users").document(email).set(map)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            uploadImage();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    pd.dismiss();
+                    e.printStackTrace();
+                    Toast.makeText(ProfileActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
     }
 
@@ -272,6 +292,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<byte[]>() {
                                     @Override
                                     public void onSuccess(byte[] bytes) {
+                                        encodedImage = bytes;
                                         setProfilePic(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
                                     }
                                 });
